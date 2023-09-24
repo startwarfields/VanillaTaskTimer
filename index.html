@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML 5 Boilerplate</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+	<script src="index.js"> </script>
+  <body>
+        <button onclick="PlayAlarm()" type="button">Play Alarm</button>
+        <button onclick="PauseAlarm()" type="button">Pause Alarm</button>
+        
+        <h1>Add Tasks</h1>
+        <form onsubmit="return addItem('list', this.inputItem)"> 
+          <input type="text" id="inputItem" placeholder="Enter a Task">
+          <input type="submit">
+        </form>
+        <ul id="list">
+        </ul>
+
+        <h1>Select Task</h1>
+        
+        <button onclick="generateTasks('menu')" type="button">Generate Task Options</button>
+        <select id="menu" name="Select Task"></select>
+        <p id="TaskTimer">00:05</p>
+        <button onclick="startTaskAlarm('menu','list')" type="button">Start Alarm Timer</button>
+  </body>
+</html>
