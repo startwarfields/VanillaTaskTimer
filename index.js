@@ -39,7 +39,7 @@ function startTaskAlarm(menu, list) {
     while(list.firstChild) {
         list.removeChild(list.firstChild);
     }
-    const idx = tasklist.indexOf(menu.live);
+    const idx = tasklist.indexOf(menu.value);
     tasklist.splice(idx, 1);
 
     for (const element of tasklist) {
